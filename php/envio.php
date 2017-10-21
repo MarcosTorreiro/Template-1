@@ -58,10 +58,10 @@ $mail->AltBody = $_POST['mensaje'];
 //send the message, check for errors
 if (!$mail->send()) {
     echo "<script>alert('El mensaje no se ha podido enviar.');</script>";
-    headers('Location:"http://localhost/pepe-project/html"');
+    headers('Location:"http://http://localhost/template-1/index.html"');
 } else {
     echo "<script>alert('El mensaje se mando correctamente.');</script>";
-      headers('Location:"http://localhost/pepe-project/html"');
+
     //Section 2: IMAP
     //Uncomment these to save your message in the 'Sent Mail' folder.
     #if (save_mail($mail)) {
@@ -75,12 +75,6 @@ if (!$mail->send()) {
 //be useful if you are trying to get this working on a non-Gmail IMAP server.
 function save_mail($mail)
 {
-    //You can change 'Sent Mail' to any other folder or tag
-    $path = "{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail";
-    //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
-    $imapStream = imap_open($path, $mail->Username, $mail->Password);
-    $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-    imap_close($imapStream);
-    return $result;
+  headers('Location:"http://localhost/template-1/index.html"');
 }
  ?>
