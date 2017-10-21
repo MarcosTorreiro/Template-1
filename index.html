@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi tienda</title>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/mui.js"></script>
+    <script src="js/mui.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a id ="nosotros">NOSOTROS</a></li>
+          <li><a id ="servicios">SERVICIOS</a></li>
+        </ul>
+        <img id="logo" src="other/icons/logo.png"/>
+        <ul>
+          <li><a id="tienda">TIENDA</a></li>
+          <li><a id ="contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="banner"></section>
+      <section id="part1">
+        <article class="contenido">
+          <div class="colocacion">
+          <div>
+          <h1 class="wow fadeInUp">Sobre Nosotros</h1>
+          <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus lectus eros,
+             sed dignissim leo condimentum at. Nullam non ipsum dictum diam semper malesuada.
+             Quisque elit ex, tincidunt sit amet ligula a, condimentum auctor massa.
+             Nam dapibus neque ex, tristique bibendum libero pulvinar ac.
+             Phasellus eleifend libero sem, sit amet suscipit leo sagittis sed.
+             Duis euismod ac elit sed imperdiet. Nullam sit amet suscipit elit.
+             Phasellus congue, diam at maximus pellentesque, ante nisi sagittis elit,
+             sed congue risus nulla quis libero. Donec venenatis ullamcorper ex,
+             vitae ullamcorper risus.</p>
+           </div>
+          <img class="wow fadeInUp" id="foto" src="other/img/fashion.jpg">
+        </div>
+        </article>
+      </section>
+      <section id="part2A">
+          <h1>Servicios</h1>
+      </section>
+      <section id="part2B" >
+        <div class="contenido">
+          <div class="servicios">
+            <article class="servicio wow fadeInUp">
+                <img src="other/icons/teacher.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus lectus eros,
+                   sed dignissim leo condimentum at. Nullam non ipsum dictum diam semper malesuada.
+                   Quisque elit ex, tincidunt sit amet ligula a</p>
+            </article>
+            <article class="servicio wow fadeInUp">
+                <img src="other/icons/truck.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus lectus eros,
+                   sed dignissim leo condimentum at. Nullam non ipsum dictum diam semper malesuada.
+                   Quisque elit ex, tincidunt sit amet ligula a</p>
+            </article>
+            <article class="servicio wow fadeInUp">
+                <img src="other/icons/telefono.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus lectus eros,
+                   sed dignissim leo condimentum at. Nullam non ipsum dictum diam semper malesuada.
+                   Quisque elit ex, tincidunt sit amet ligula a</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="part3A">
+          <h1>Tienda</h1>
+      </section>
+      <section id="part3B">
+        <div class="contenido wow fadeInUp">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus lectus eros,
+             sed dignissim leo condimentum at. Nullam non ipsum dictum diam semper malesuada.
+             Quisque elit ex, tincidunt sit amet ligula a, condimentum auctor massa.
+             Nam dapibus neque ex, tristique bibendum libero pulvinar ac.
+          </p>
+        </div>
+      </section>
+      <section id="part4A">
+          <h1>Contacto</h1>
+      </section>
+      <section id="part4B">
+        <div class="contacto">
+        <div class="informacion">
+          <h2 class="wow fadeInUp">Información:</h2>
+          <ul>
+            <li class="wow fadeInUp">-Teléfono: 981 981 981</li>
+            <li class="wow fadeInUp">-Fax: 981 981 981</li>
+            <li class="wow fadeInUp">-E-mail: mitienda@gmail.com</li>
+            <li class="wow fadeInUp">-Dirección: Rua do Convento, 36, 15800 Melide, A Coruña</li>
+          </ul>
+          <div class="wow fadeInUp" id="mapa" ></div>
+        </div>
+        <form class="mensaje mui-form" action="php/envio.php" method="post">
+          <legend>Envianos un mensaje</legend>
+          <div class="mui-textfield mui-textfield--float-label wow fadeInUp">
+            <input name="nombre" type="text">
+            <label>Nombre</label>
+          </div>
+          <div class="mui-textfield mui-textfield--float-label wow fadeInUp">
+            <input name="email" required type="email">
+            <label>E-mail</label>
+          </div>
+          <div class="mui-textfield mui-textfield--float-label wow fadeInUp">
+            <input name="asunto" type="text">
+            <label>Asunto</label>
+          </div>
+          <div class="mui-textfield mui-textfield--float-label wow fadeInUp">
+            <textarea name="mensaje" required></textarea>
+            <label>Mensaje</label>
+          </div>
+          <button type="submit" class="mui-btn mui-btn--raised wow fadeInUp">Enviar Mensaje</button>
+        </form>
+      </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script type="text/javascript">
+      function initMap() {
+        var coor = {lat: 42.914496, lng: -8.015323};
+        var map = new google.maps.Map(document.getElementById('mapa'), {
+          zoom: 15,
+          center: coor
+        });
+        var marker = new google.maps.Marker({
+          position: coor,
+          map: map
+        });
+      }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYQ3cWx7R4pfQ9TcgUQ7vkbGJ0gDXhzKg&callback=initMap"></script>
+</html>

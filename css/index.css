@@ -1,0 +1,253 @@
+  *{
+    margin: 0;
+    padding: 0;
+    font: Arial;
+  }
+  @font-face {
+    font-family: 'Catamaran-Regular';
+    src: url('../other/fonts/Catamaran-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Catamaran-Black';
+    src: url('../other/fonts/Catamaran-Black.ttf');
+  }
+
+  body{
+    font-family: 'Catamaran-Regular';
+    font-size: 2vh;
+    justify-content: justify;
+  }
+
+  h1{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Catamaran-Black';
+    font-size: 6vh;
+  }
+/*----------------Banner-------------------- */
+  header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    transition: 1s;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    transition: padding-left .5s;
+  }
+
+  ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  li{
+    width: 50%;
+    list-style: none;
+    margin-left: 20px;
+  }
+
+  a{
+    color: #86EFCC;
+    margin: 5px;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #logo{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 250px;
+    height: 250px;
+    margin-top: 150px;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  #banner{
+    width: 100%;
+    background: url('../other/img/store.jpg') no-repeat 50% 50%;
+    background-size: cover;
+  }
+  /*----------------Nosotros-------------------- */
+  #part1{
+    display: table;
+    background-color: white;
+    height: 650px;
+    width: 65%;
+    background-attachment: fixed;
+    margin: auto;
+  }
+
+  #foto{
+    width: 30vw;
+    height: 40vh;
+    margin-left: 20px;
+  }
+
+  #part1 p{
+    margin-top: 25px;
+  }
+
+  .contenido{
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    width: 60%;
+  }
+
+  .colocacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+/*----------------Servicios-------------------- */
+  #part2A{
+    display: table;
+    background-image: url('../other/img/shop.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 275px;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 3vh;
+  }
+
+  #part2B{
+    display: table;
+    text-align: center;
+    background-color: white;
+    background-attachment: fixed;
+    height: 750px;
+    width:70%;
+    margin: auto;
+  }
+
+  .servicios{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .servicio img {
+    height: 30%;
+    width: 40%;
+  }
+
+  .servicio p {
+    width: 60%;
+    margin: 0;
+    text-align: justify;
+  }
+
+  /*----------------Tienda-------------------- */
+
+  #part3A{
+    display: table;
+    background-image: url('../other/img/shirts.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 275px;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 3vh;
+  }
+
+  #part3B{
+    display: table;
+    text-align: center;
+    background-color: white;
+    background-attachment: fixed;
+    height: 750px;
+    width:65%;
+    margin: auto;
+  }
+
+  /*----------------Contacto-------------------- */
+  #part4A{
+    display: table;
+    background-image: url('../other/img/write.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 275px;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 3vh;
+  }
+
+  #part4B{
+    display: table;
+    background-color: white;
+    background-attachment: fixed;
+    height: 750px;
+    width: 70%;
+    margin: auto;
+  }
+  .contacto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mensaje{
+    width: 40%;
+    padding-top: 100px;
+  }
+
+  .informacion{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .informacion ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea{
+    resize: none;
+    height: 200px;
+  }
+
+  #mapa {
+    width: 100%;
+    height: 250px;
+    background-color: grey;
+  }
+
+    /*----------------Footer-------------------- */
+
+    footer{
+      height: 200px;
+      background-color: #1f1f1f;
+    }
