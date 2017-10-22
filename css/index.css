@@ -263,6 +263,7 @@
 
             /*-------Nosotros-------- */
       .contenido{
+        width: 70%;
         padding-top: 5%;
         padding-bottom: 5%;
       }
@@ -326,7 +327,7 @@
         }
 
         .informacion{
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           width: 100%;
         }
         .informacion p{
