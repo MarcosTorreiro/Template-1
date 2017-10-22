@@ -22,7 +22,7 @@
     display: table-cell;
     vertical-align: middle;
     font-family: 'Catamaran-Black';
-    font-size: 5vw;
+    font-size: 6vh;
   }
 
   h2{
@@ -285,8 +285,8 @@
       }
 
       #foto{
-        width: 75%;
-        height: 60%;
+        width: 50%;
+        height: 50%;
         margin: auto;
         margin-top: 20px;
       }
@@ -346,9 +346,23 @@
 
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
+      #foto{
+        width: 70%;
+        height: 60%;
+        margin: auto;
+        margin-top: 20px;
+      }
       .contenido{
         width: 90%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .contenido{
+        width: 100%;
         padding-top: 5%;
         padding-bottom: 5%;
       }
