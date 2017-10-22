@@ -280,6 +280,10 @@
         margin: auto;
       }
 
+      .colocacion h2{
+        padding-bottom: 10px;
+      }
+
       #foto{
         width: 75%;
         height: 60%;
