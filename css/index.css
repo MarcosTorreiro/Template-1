@@ -27,7 +27,7 @@
 
   h2{
     font-size: 4vh;
-    font-family: 'Catamaran-Black';
+    font-weight: bolder;
   }
 /*----------------Banner-------------------- */
   header{
@@ -263,7 +263,7 @@
 
             /*-------Nosotros-------- */
       .contenido{
-        width: 70%;
+        width: 80%;
         padding-top: 5%;
         padding-bottom: 5%;
       }
