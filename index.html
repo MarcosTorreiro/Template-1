@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Mi tienda</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/mui.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -16,19 +17,31 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul id="menuI">
           <li><a id ="nosotros">NOSOTROS</a></li>
           <li><a id ="servicios">SERVICIOS</a></li>
         </ul>
         <img id="logo" src="other/icons/logo.png"/>
-        <ul>
+        <ul id="menuD">
           <li><a id="tienda">TIENDA</a></li>
           <li><a id ="contacto">CONTACTO</a></li>
         </ul>
+        <div class="select">
+          <i class="material-icons">menu</i>
+          <ul class="menuOculto">
+            <li><a id ="nosotros">NOSOTROS</a></li>
+            <li><a id ="servicios">SERVICIOS</a></li>
+            <li><a id="tienda">TIENDA</a></li>
+            <li><a id ="contacto">CONTACTO</a></li>
+          </ul>
+        </div>
+
       </nav>
     </header>
     <main>
-      <section id="banner"></section>
+      <section id="banner">
+        <img id="icono" src="other/icons/logo.png"/>
+      </section>
       <section id="part1">
         <article class="contenido">
           <div class="colocacion">
