@@ -361,6 +361,14 @@
     }
 
     @media screen and (max-width: 600px) {
+        nav{
+          font-size: 1vh;
+        }
+
+        h1{
+          font-size: 4vh;
+        }
+
       .contenido{
         width: 100%;
         padding-top: 5%;
