@@ -58,9 +58,10 @@ $mail->AltBody = $_POST['mensaje'];
 //send the message, check for errors
 if (!$mail->send()) {
     echo "<script>alert('El mensaje no se ha podido enviar.');</script>";
-    headers('Location:"http://http://localhost/template-1/index.html"');
+    header('Location:"http://http://localhost/template-1/index.html"');
 } else {
     echo "<script>alert('El mensaje se mando correctamente.');</script>";
+    header('Location:"http://localhost/template-1/index.html"');
 
     //Section 2: IMAP
     //Uncomment these to save your message in the 'Sent Mail' folder.
@@ -73,8 +74,5 @@ if (!$mail->send()) {
 //Function to call which uses the PHP imap_*() functions to save messages: https://php.net/manual/en/book.imap.php
 //You can use imap_getmailboxes($imapStream, '/imap/ssl') to get a list of available folders or labels, this can
 //be useful if you are trying to get this working on a non-Gmail IMAP server.
-function save_mail($mail)
-{
-  headers('Location:"http://localhost/template-1/index.html"');
-}
+
  ?>
