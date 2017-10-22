@@ -88,7 +88,7 @@
             $('#logo').css({'width':'250px','height':'250px'});
           }else if(tamaño > 750){
             $('#logo').css({'width':'175px','height':'175px'});
-          }else if(tamaño <= 750){
+          }else {
             $('#logo').css({'width':'125px','height':'125px'});
           }
         }
