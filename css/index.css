@@ -109,13 +109,13 @@
     padding: 6px;
   }
 
-  @media screen and (device-width:640pt) {
+  @media screen and (min-width:736px) {
     #menuMovil {
       display: none;
     }
   }
 
-  @media screen and (device-width:640pt) {
+  @media screen and (max-width:736px) {
     #menuD, #menuI {
       display: none;
     }
