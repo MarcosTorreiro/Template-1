@@ -134,8 +134,8 @@
     }
     #icono{
       display: block;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       margin: auto;
       padding-top: 200px;
     }
@@ -474,8 +474,8 @@
     }
 
     #foto{
-      width: 70%;
-      height: 50%;
+      width: 80%;
+      height: 60%;
       margin: auto;
     }
   }
