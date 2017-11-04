@@ -104,7 +104,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     border-radius: 6px;
     padding: 6px;
   }
@@ -121,7 +121,6 @@
     }
     #menuMovil {
       display: flex;
-      width: 85px;
     }
     nav {
       justify-content: space-between;
@@ -141,7 +140,7 @@
     }
   }
 
-  #menuMovil i {
+  #menuMovil span {
     margin-left: 6px;
   }
 
