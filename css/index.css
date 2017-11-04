@@ -121,6 +121,7 @@
     }
     #menuMovil {
       display: flex;
+      font-size: 1.5vh;
     }
     nav {
       justify-content: flex-end;
