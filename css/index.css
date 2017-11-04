@@ -459,16 +459,3 @@
       height: 125px;
     }
   }
-
-  @media only screen and (max-width: 800px) {
-    #icono {
-      display: block;
-      margin: auto;
-      padding-top: 250px;
-      width: 200px;
-      height: 200px;
-    }
-    #logo {
-      display: none;
-    }
-  }
