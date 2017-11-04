@@ -1,51 +1,58 @@
-  *{
+  * {
     margin: 0;
     padding: 0;
     font: Arial;
   }
+
   @font-face {
     font-family: 'Catamaran-Regular';
     src: url('../other/fonts/Catamaran-Regular.ttf');
   }
+
   @font-face {
     font-family: 'Catamaran-Black';
     src: url('../other/fonts/Catamaran-Black.ttf');
   }
 
-  body{
+  body {
     font-family: 'Catamaran-Regular';
     font-size: 2vh;
     justify-content: center;
   }
 
-  h1{
+  h1 {
     display: table-cell;
     vertical-align: middle;
     font-family: 'Catamaran-Black';
     font-size: 6vh;
   }
 
-  h2{
+  h2 {
     font-size: 4vh;
     font-weight: bolder;
   }
-/*----------------Banner-------------------- */
-  .select{
+
+  /*----------------Banner-------------------- */
+
+  .select {
     display: none;
   }
 
-  #icono{
+  #icono {
     display: none;
   }
 
-  header{
+  header {
     position: fixed;
     width: 100%;
     height: 70px;
     transition: 1s;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
   }
 
-  nav{
+  nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,32 +60,31 @@
     transition: padding-left .5s;
   }
 
-  ul{
+  ul {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
 
-  li{
+  li {
     width: 50%;
     margin: 5px;
     list-style: none;
   }
 
-  a{
+  a {
     color: #86EFCC;
     margin: 5px;
     text-decoration: none;
   }
 
-  a:hover{
+  a:hover {
     color: white;
     cursor: pointer;
     text-decoration: none;
   }
 
-
-  #logo{
+  #logo {
     margin-left: 10%;
     margin-right: 10%;
     width: 250px;
@@ -88,13 +94,160 @@
     cursor: pointer;
   }
 
-  #banner{
+  #banner {
     width: 100%;
     background: url('../other/img/store.jpg') no-repeat 50% 50%;
     background-size: cover;
   }
+
+  #menuMovil {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px;
+  }
+
+  @media screen and (min-width:736px) {
+    #menuMovil {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:736px) {
+    #menuD, #menuI {
+      display: none;
+    }
+    #menuMovil {
+      display: flex;
+    }
+    nav {
+      justify-content: flex-end;
+      margin-right: 2em;
+      padding-top: 0;
+      align-items: center;
+    }
+    header {
+      justify-content: flex-end;
+    }
+  }
+
+  #menuMovil i {
+    margin-left: 6px;
+  }
+
+  #menuD li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #menuI li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #menu {
+    -moz-transform: translateX(20em);
+    -webkit-transform: translateX(20em);
+    -ms-transform: translateX(20em);
+    transform: translateX(20em);
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    -webkit-overflow-scrolling: touch;
+    background: #21b2a6;
+    color: #ffffff;
+    height: 100%;
+    max-width: 80%;
+    overflow-y: auto;
+    padding: 3em 2em;
+    position: fixed;
+    right: -10%;
+    top: 0;
+    width: 20em;
+    z-index: 10002;
+  }
+  body.is-menu-visible #menu{
+    right: 0;
+  }
+
+  #menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #menu ul>li {
+    border-top: solid 1px rgba(0, 0, 0, 0.125);
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 0 0 0;
+  }
+
+  #menu ul>li:first-child {
+    border-top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  #menu ul>li>a {
+    border: 0;
+    color: inherit;
+    display: block;
+    font-size: 0.8em;
+    letter-spacing: 0.225em;
+    outline: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 736px) {
+    #menu ul>li>a {
+      line-height: 3em;
+    }
+  }
+
+  #menu .close {
+    background-image: url("../other/img/close.svg");
+    background-position: 4.85em 1em;
+    background-repeat: no-repeat;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    vertical-align: middle;
+    width: 7em;
+  }
+
+  @media screen and (max-width: 736px) {
+    #menu {
+      padding: 3em 1.5em;
+    }
+  }
+
+  body.is-menu-visible #page-wrapper {
+    opacity: 0.35;
+  }
+
+  body.is-menu-visible #page-wrapper:before {
+    display: block;
+  }
+
+  body.is-menu-visible #menu {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
   /*----------------Nosotros-------------------- */
-  #part1{
+
+  #part1 {
     display: table;
     background-color: white;
     height: 650px;
@@ -103,31 +256,32 @@
     margin: auto;
   }
 
-  #foto{
+  #foto {
     width: 30vw;
     height: 40vh;
     margin-right: 20px;
   }
 
-  #part1 p{
+  #part1 p {
     margin-top: 25px;
   }
 
-  .contenido{
+  .contenido {
     display: table-cell;
     vertical-align: middle;
     margin: auto;
     width: 60%;
   }
 
-  .colocacion{
+  .colocacion {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-/*----------------Servicios-------------------- */
-  #part2A{
+  /*----------------Servicios-------------------- */
+
+  #part2A {
     display: table;
     background-image: url('../other/img/shop.jpg');
     background-attachment: fixed;
@@ -136,21 +290,21 @@
     height: 275px;
     width: 100%;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 3vh;
   }
 
-  #part2B{
+  #part2B {
     display: table;
     text-align: center;
     background-color: white;
     background-attachment: fixed;
     height: 750px;
-    width:70%;
+    width: 70%;
     margin: auto;
   }
 
-  .servicios{
+  .servicios {
     display: flex;
     flex-direction: row;
   }
@@ -175,7 +329,7 @@
 
   /*----------------Tienda-------------------- */
 
-  #part3A{
+  #part3A {
     display: table;
     background-image: url('../other/img/shirts.jpg');
     background-attachment: fixed;
@@ -184,26 +338,27 @@
     height: 275px;
     width: 100%;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 3vh;
   }
 
-  #part3B{
+  #part3B {
     display: table;
     text-align: center;
     background-color: white;
     background-attachment: fixed;
     height: 750px;
-    width:65%;
+    width: 65%;
     margin: auto;
   }
 
-    #part3B a{
-      position: static;
-    }
+  #part3B a {
+    position: static;
+  }
 
   /*----------------Contacto-------------------- */
-  #part4A{
+
+  #part4A {
     display: table;
     background-image: url('../other/img/write.jpg');
     background-attachment: fixed;
@@ -212,11 +367,11 @@
     height: 275px;
     width: 100%;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 3vw;
   }
 
-  #part4B{
+  #part4B {
     display: table;
     background-color: white;
     background-attachment: fixed;
@@ -225,7 +380,7 @@
     margin: auto;
   }
 
-  .contacto{
+  .contacto {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -234,24 +389,24 @@
     align-items: center;
   }
 
-  .mensaje{
+  .mensaje {
     width: 40%;
     padding-top: 100px;
   }
 
-  .informacion{
+  .informacion {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     width: 40%;
   }
 
-  .informacion ul{
+  .informacion ul {
     display: flex;
     flex-direction: column;
   }
 
-  textarea{
+  textarea {
     resize: none;
     height: 200px;
   }
@@ -262,67 +417,58 @@
     background-color: grey;
   }
 
+  /*----------------Footer-------------------- */
 
-
-    /*----------------Footer-------------------- */
-
-    footer{
-      height: 200px;
-      background-color: #1f1f1f;
-    }
-
-    /*--------------Medias query----------------*/
-
-   @media only screen and (max-width: 1450px) {
-
-        #logo{
-          width: 175px;
-          height: 175px;
-        }
-        /*--------Contacto--------- */
-      .contacto{
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .mensaje{
-        width: 100%;
-        padding-bottom: 100px;
-      }
-
-      .informacion{
-        flex-wrap: nowrap;
-        width: 100%;
-      }
-      .informacion p{
-        margin-top: 10px;
-      }
-
-      #mapa {
-        height: 300px;
-        background-color: grey;
-      }
-}
-
-@media only screen and (max-width: 750px) {
-
-  #logo{
-    width: 125px;
-    height: 125px;
+  footer {
+    height: 200px;
+    background-color: #1f1f1f;
   }
-}
 
-@media only screen and (max-width: 800px) {
+  /*--------------Medias query----------------*/
 
-      #icono{
-        display: block;
-        margin: auto;
-        padding-top: 250px;
-        width: 200px;
-        height: 200px;
-      }
+  @media only screen and (max-width: 1450px) {
+    #logo {
+      width: 175px;
+      height: 175px;
+    }
+    /*--------Contacto--------- */
+    .contacto {
+      flex-direction: column;
+      width: 100%;
+    }
+    .mensaje {
+      width: 100%;
+      padding-bottom: 100px;
+    }
+    .informacion {
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    .informacion p {
+      margin-top: 10px;
+    }
+    #mapa {
+      height: 300px;
+      background-color: grey;
+    }
+  }
 
-      #logo{
-        display: none;
-      }
-}
+  @media only screen and (max-width: 750px) {
+    #logo {
+      width: 125px;
+      height: 125px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #icono {
+      display: block;
+      margin: auto;
+      padding-top: 250px;
+      width: 200px;
+      height: 200px;
+    }
+    #logo {
+      display: none;
+    }
+  }
